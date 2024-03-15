@@ -1,0 +1,26 @@
+\documentclass{article}
+
+\begin{document}
+
+Puedes escribir comandos de R en tu documento
+de \LaTeX{}, los cuales serán procesados y su 
+resultado será incluido en el documento bajo 
+la configuración determinada.
+
+\section{Sucesión}
+
+Insertando un chunk:
+<<echo=FALSE>>=
+  # Creando una secuencia de números:
+  s = 2:10
+  
+  # Mostrando la secuencia de números:
+  cat(s)
+@
+
+$\newline$
+Insertando una expresión en línea:
+$\newline$
+La media de los datos es: $\Sexpr{mean(s)}$
+
+\end{document}

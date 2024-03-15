@@ -1,0 +1,15 @@
+\documentclass{article}
+
+\begin{document}
+
+\section{Gráfica}
+
+<<echo=FALSE,plot1,fig.height=4,fig.width=4,fig.cap="Mi primer gráfico",fig.align='center',out.width='.8\\linewidth'>>=
+
+  xdatos <- read.csv(file="datos.txt",head=TRUE,sep="")
+  hist(xdatos$data,main="Histograma",xlab="Datos",ylab="Frecuencia")
+  
+@
+
+
+\end{document}
