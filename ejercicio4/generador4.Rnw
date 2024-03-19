@@ -1,0 +1,22 @@
+\documentclass{article}
+
+\begin{document}
+
+<<include_script, echo=FALSE>>=
+# Incluir el script externo que genera la gráfica
+source("mi_script.R")
+@
+
+% Insertar la gráfica en el documento PDF
+\begin{figure}[htbp]
+    \centering
+    <<grafica_chunk, echo=FALSE, fig.pos="H">>=
+    # Creando una gráfica de pastel
+pie(ventas_por_categoria$ventas,labels=ventas_por_categoria$categoria,main="Departamento de caballeros")
+
+    @
+    \caption{Gráfica de pastel de ventas de ropa de caballero}
+    \label{fig:grafica_ventas}
+\end{figure}
+
+\end{document}

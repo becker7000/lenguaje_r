@@ -1,0 +1,26 @@
+\documentclass{article}
+\begin{document}
+
+\section{Nueva sección}
+
+<<plot1,echo=FALSE, fig.pos="!h", fig.height=4, fig.width=4, fig.cap="Mi gráfica">>=
+
+xdata = read.csv(file="datos.txt", head=TRUE,sep=" ")
+
+hist(xdata$data, main="Histograma",xlab="Datos",ylab="Frecuencia")
+
+@
+
+$\newline$
+b: Abajo (bottom) de la página. 
+$\newline$
+h: Aquí (here), intenta colocar la figura cerca del lugar donde se define en el código.
+$\newline$
+p: Página (page), coloca la figura en una página separada que solo contiene figuras.
+$\newline$
+!: Permite a LaTeX ignorar algunas restricciones estándar de posicionamiento.
+$\newline$
+
+La figura \ref{fig:plot1} es un histograma simple.
+
+\end{document}
